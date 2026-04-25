@@ -1008,11 +1008,20 @@
     }
 
     .pub-title {
+      display: block;
       font-size: 1.02rem;
       font-weight: 500;
       color: var(--text-bright);
       margin-bottom: 0.4rem;
       line-height: 1.4;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a.pub-title:hover {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 212, 255, 0.5);
+      text-underline-offset: 4px;
     }
     .pub-meta { font-size: 0.85rem; color: var(--text-mid); font-style: italic; }
     .pub-journal {
@@ -1595,16 +1604,16 @@
 
     <div class="hero-stats-bar">
       <div>
-        <div class="hero-stat-num" data-target="24">0</div>
+        <div class="hero-stat-num" data-target="12" data-suffix="+">0</div>
         <div class="hero-stat-label">Publications</div>
       </div>
       <div>
-        <div class="hero-stat-num" data-target="580" data-suffix="+">0</div>
+        <div class="hero-stat-num" data-target="81">0</div>
         <div class="hero-stat-label">Citations</div>
       </div>
       <div>
-        <div class="hero-stat-num" data-target="11">0</div>
-        <div class="hero-stat-label">Conferences</div>
+        <div class="hero-stat-num" data-target="10" data-suffix="+">0</div>
+        <div class="hero-stat-label">Conferences Attended</div>
       </div>
       <div>
         <div class="hero-stat-num" data-target="3">0</div>
@@ -1643,36 +1652,48 @@
         <div class="section-label section-label-magenta reveal">About</div>
         <h2 class="section-title reveal">
           <span class="gradient-text">Tolulope Oladeji</span><br>
-          Quantitative Spatial Scientist
+          Geospatial Data Scientist
         </h2>
         <p class="reveal">
-          I am a doctoral researcher at the University of Cincinnati, working at the
-          intersection of <strong style="color:var(--cyan)">spatial statistics</strong>,
-          <strong style="color:var(--magenta)">geographic information science</strong>, and
-          <strong style="color:var(--emerald)">machine learning</strong>.
+          I am a doctoral researcher at the University of Cincinnati working at the
+          intersection of <strong style="color:var(--cyan)">Geospatial Data Science</strong>,
+          <strong style="color:var(--magenta)">Artificial Intelligence</strong>, and
+          <strong style="color:var(--emerald)">Environmental & Public Health</strong>.
+          My work bridges spatial statistics, geographic information science, Spatial
+          Epidemiology and GeoAI to understand how place, environment, and context
+          shape human health, environmental and ecological outcomes.
         </p>
         <p class="reveal">
-          My research develops Bayesian hierarchical models, geospatial neural networks,
-          and causal-inference frameworks to decode how space and place shape human
-          and ecological systems — with applications spanning public health, environmental
-          monitoring, and national security intelligence.
+          My research focuses on developing advanced spatiotemporal and AI-driven
+          approaches — including Bayesian hierarchical models, geospatial neural
+          networks, and causal inference frameworks — to analyze environmental
+          exposures and predict population-level health risks. I am particularly
+          interested in geospatial AI and environmental health analytics, with
+          applications in maternal and child health, environmental monitoring, and
+          decision intelligence. Through this work, I aim to generate actionable,
+          data-driven insights that inform public health interventions and policy
+          across both high- and low-resource settings.
         </p>
         <p class="reveal">
-          Recent collaborations include the CDC, municipal governments, NGA-affiliated
-          research labs, and international agencies on spatially explicit decision-support
-          systems.
+          Beyond research, I am passionate about mentoring emerging Geospatial AI
+          researchers and fostering open science communities in GeoML. I am actively
+          involved with the Digital Epidemiology Laboratory and continuously seek
+          opportunities to contribute to collaborative, mission-driven work with
+          real-world impact. I am open to collaborating with organizations such as
+          the CDC, municipal governments, NGA-affiliated research labs, and
+          international partners to develop spatial decision-support systems.
         </p>
 
         <div class="expertise-tags reveal">
-          <span class="tag">Spatial Statistics</span>
-          <span class="tag">GIS</span>
+          <span class="tag">Geospatial Data Science</span>
+          <span class="tag">GeoAI</span>
+          <span class="tag">Spatial Epidemiology</span>
           <span class="tag">Bayesian Inference</span>
-          <span class="tag">R · Python · Julia</span>
-          <span class="tag">Geostatistics</span>
-          <span class="tag">Graph Neural Nets</span>
+          <span class="tag">R · Python</span>
+          <span class="tag">GIS</span>
           <span class="tag">Remote Sensing</span>
-          <span class="tag">Public Health</span>
-          <span class="tag">GEOINT</span>
+          <span class="tag">Environmental Health</span>
+          <span class="tag">Maternal & Child Health</span>
         </div>
       </div>
     </div>
@@ -1683,16 +1704,16 @@
     <div class="metrics-card reveal">
       <div class="metrics-grid">
         <div class="metric">
-          <div class="metric-num" data-target="24">0</div>
+          <div class="metric-num" data-target="12" data-suffix="+">0</div>
           <div class="metric-label">Peer-Reviewed Works</div>
         </div>
         <div class="metric">
-          <div class="metric-num" data-target="580" data-suffix="+">0</div>
+          <div class="metric-num" data-target="81">0</div>
           <div class="metric-label">Citations</div>
         </div>
         <div class="metric">
-          <div class="metric-num" data-target="11">0</div>
-          <div class="metric-label">Conferences Presented</div>
+          <div class="metric-num" data-target="10" data-suffix="+">0</div>
+          <div class="metric-label">Conferences Attended</div>
         </div>
         <div class="metric">
           <div class="metric-num" data-target="3">0</div>
@@ -1760,72 +1781,80 @@
       </p>
 
       <div class="pub-filter reveal">
-        <button class="filter-btn active" data-filter="all">All Works</button>
-        <button class="filter-btn" data-filter="journal">Journal Articles</button>
-        <button class="filter-btn" data-filter="conference">Conferences</button>
-        <button class="filter-btn" data-filter="preprint">Preprints</button>
+        <button class="filter-btn active" data-filter="all">All Journal Articles</button>
+        <a href="https://scholar.google.com/citations?user=pPv5YB8AAAAJ&hl=en" target="_blank" rel="noopener" class="filter-btn" style="text-decoration:none;">View Full List on Google Scholar →</a>
       </div>
 
       <div class="pub-list" id="pubList">
 
-        <div class="pub-item reveal" data-type="journal">
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=A+spatial+inventory+of+freshwater+macroinvertebrate+occurrences+in+the+Guineo-Congolian+biodiversity+hotspot">
           <div class="pub-year">2025</div>
           <div>
-            <div class="pub-title">Bayesian spatiotemporal modeling of respiratory hospitalization rates with INLA-SPDE: evidence from Greater Cincinnati, 2010–2022</div>
-            <div class="pub-meta">T. Oladeji, K. Mensah, R. Singh</div>
-            <div class="pub-journal">Spatial and Spatio-temporal Epidemiology · Vol. 52, pp. 100–118</div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=A+spatial+inventory+of+freshwater+macroinvertebrate+occurrences+in+the+Guineo-Congolian+biodiversity+hotspot" target="_blank" rel="noopener">A spatial inventory of freshwater macroinvertebrate occurrences in the Guineo-Congolian biodiversity hotspot</a>
+            <div class="pub-meta">EO Akindele, AM Adedapo, OT Akinpelu, ED Kowobari, OC Folorunso, T. A. Oladeji et al.</div>
+            <div class="pub-journal">Scientific Data · Vol. 12 (1), 227 · Cited by 2</div>
           </div>
           <div class="pub-badge badge-journal">Journal</div>
         </div>
 
-        <div class="pub-item reveal" data-type="journal">
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Freshwater+macroinvertebrates+along+the+Nigeria-Cameroon+border+enhance+the+conservation+value+of+the+lower+Guinea+forest+biodiversity+hotspot">
           <div class="pub-year">2024</div>
           <div>
-            <div class="pub-title">Spatially regularized gradient boosting for fine-scale PM₂.₅ prediction from sparse monitoring networks</div>
-            <div class="pub-meta">T. Oladeji, Y. Liu, C. Hartmann</div>
-            <div class="pub-journal">Environmental Research Letters · Vol. 19, 084021</div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Freshwater+macroinvertebrates+along+the+Nigeria-Cameroon+border+enhance+the+conservation+value+of+the+lower+Guinea+forest+biodiversity+hotspot" target="_blank" rel="noopener">Freshwater macroinvertebrates along the Nigeria–Cameroon border enhance the conservation value of the lower Guinea forest biodiversity hotspot</a>
+            <div class="pub-meta">EO Akindele, AM Adedapo, OT Akinpelu, IR Fagbohun, ED Kowobari, T. A. Oladeji et al.</div>
+            <div class="pub-journal">Journal of Environmental Management · Vol. 355, 120532 · Cited by 6</div>
           </div>
           <div class="pub-badge badge-journal">Journal</div>
         </div>
 
-        <div class="pub-item reveal" data-type="conference">
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Habitat+characteristics+and+anthropogenic+activities+influence+the+distribution+of+macroinvertebrate+traits+and+ecological+preferences+in+Nigerian+streams">
           <div class="pub-year">2024</div>
           <div>
-            <div class="pub-title">Spatial difference-in-differences estimation with heterogeneous spillovers: a Monte Carlo evaluation</div>
-            <div class="pub-meta">T. Oladeji, M. Okafor</div>
-            <div class="pub-journal">AAG Annual Meeting · Honolulu, HI</div>
-          </div>
-          <div class="pub-badge badge-conference">Conference</div>
-        </div>
-
-        <div class="pub-item reveal" data-type="journal">
-          <div class="pub-year">2023</div>
-          <div>
-            <div class="pub-title">Geographically weighted random forests for health outcome prediction: balancing local fit and extrapolation risk</div>
-            <div class="pub-meta">T. Oladeji, F. Adeyemi, P. Schweizer</div>
-            <div class="pub-journal">International Journal of Geographical Information Science · Vol. 37, 1890–1914</div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Habitat+characteristics+and+anthropogenic+activities+influence+the+distribution+of+macroinvertebrate+traits+and+ecological+preferences+in+Nigerian+streams" target="_blank" rel="noopener">Habitat characteristics and anthropogenic activities influence the distribution of macroinvertebrate traits and ecological preferences in Nigerian streams: a case study of Osun</a>
+            <div class="pub-meta">OT Akinpelu, FO Arimoro, AV Ayanwale, VI Chukwuemeka, TA Oladeji et al.</div>
+            <div class="pub-journal">Aquatic Ecology · Vol. 58 (3), 833–852 · Cited by 7</div>
           </div>
           <div class="pub-badge badge-journal">Journal</div>
         </div>
 
-        <div class="pub-item reveal" data-type="preprint">
-          <div class="pub-year">2025</div>
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Heavy+metal+bioaccumulation+in+the+macroinvertebrate+functional+feeding+guilds+of+an+impaired+stream+in+South-West+Nigeria">
+          <div class="pub-year">2024</div>
           <div>
-            <div class="pub-title">Graph attention networks for areal interpolation: preserving spatial autocorrelation under misaligned boundaries</div>
-            <div class="pub-meta">T. Oladeji, S. Park</div>
-            <div class="pub-journal">arXiv · 2503.14821</div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Heavy+metal+bioaccumulation+in+the+macroinvertebrate+functional+feeding+guilds+of+an+impaired+stream+in+South-West+Nigeria" target="_blank" rel="noopener">Heavy metal bioaccumulation in the macroinvertebrate functional feeding guilds of an impaired stream in South-West Nigeria</a>
+            <div class="pub-meta">ED Kowobari, T. A. Oladeji, AM Adedapo, IR Fagbohun et al.</div>
+            <div class="pub-journal">Chemistry and Ecology · Cited by 4</div>
           </div>
-          <div class="pub-badge badge-preprint">Preprint</div>
+          <div class="pub-badge badge-journal">Journal</div>
         </div>
 
-        <div class="pub-item reveal" data-type="conference">
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Gold+mining+impairs+the+biological+water+quality+of+a+culturally+important+river+and+UNESCO+World+Heritage+Site+in+Nigeria">
           <div class="pub-year">2023</div>
           <div>
-            <div class="pub-title">Disentangling environmental and socioeconomic drivers of spatial health inequities: a Bayesian decomposition</div>
-            <div class="pub-meta">T. Oladeji, R. Chen, A. Nwosu</div>
-            <div class="pub-journal">GeoHealth Symposium · Chicago, IL</div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Gold+mining+impairs+the+biological+water+quality+of+a+culturally+important+river+and+UNESCO+World+Heritage+Site+in+Nigeria" target="_blank" rel="noopener">Gold mining impairs the biological water quality of a culturally important river and UNESCO World Heritage Site in Nigeria</a>
+            <div class="pub-meta">OGO Emmanuel O. Akindele, T. A. Oladeji, ED Kowobari, Abiodun M. Adedapo et al.</div>
+            <div class="pub-journal">Environmental Pollution · Vol. 326 · Cited by 26</div>
           </div>
-          <div class="pub-badge badge-conference">Conference</div>
+          <div class="pub-badge badge-journal">Journal</div>
+        </div>
+
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Using+macroinvertebrate+functional+traits+to+reveal+ecological+conditions+of+two+streams+in+Southwest+Nigeria">
+          <div class="pub-year">2023</div>
+          <div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Using+macroinvertebrate+functional+traits+to+reveal+ecological+conditions+of+two+streams+in+Southwest+Nigeria" target="_blank" rel="noopener">Using macroinvertebrate functional traits to reveal ecological conditions of two streams in Southwest Nigeria — a case study</a>
+            <div class="pub-meta">Abiodun M. Adedapo, ED Kowobari, IR Fagbohun, T. A. Oladeji et al.</div>
+            <div class="pub-journal">Aquatic Ecology · Vol. 57, 281–297 · Cited by 16</div>
+          </div>
+          <div class="pub-badge badge-journal">Journal</div>
+        </div>
+
+        <div class="pub-item reveal" data-type="journal" data-href="https://scholar.google.com/scholar?q=Assessment+of+the+impact+of+climate+change+on+the+occurrences+of+malaria+pneumonia+meningitis+and+cholera+in+Lokoja+City+Nigeria">
+          <div class="pub-year">2022</div>
+          <div>
+            <a class="pub-title" href="https://scholar.google.com/scholar?q=Assessment+of+the+impact+of+climate+change+on+the+occurrences+of+malaria+pneumonia+meningitis+and+cholera+in+Lokoja+City+Nigeria" target="_blank" rel="noopener">Assessment of the impact of climate change on the occurrences of malaria, pneumonia, meningitis, and cholera in Lokoja City, Nigeria</a>
+            <div class="pub-meta">IA Oluwatimilehin, JO Akerele, T. A. Oladeji, MH Omogbehin, G Atai</div>
+            <div class="pub-journal">Regional Sustainability · Vol. 3 (4), 309–318 · Cited by 21</div>
+          </div>
+          <div class="pub-badge badge-journal">Journal</div>
         </div>
 
       </div>
@@ -1914,11 +1943,11 @@
               Braunstein Hall 420 · University of Cincinnati
             </div>
           </a>
-          <a href="#" class="contact-link">
+          <a href="https://scholar.google.com/citations?user=pPv5YB8AAAAJ&hl=en" target="_blank" rel="noopener" class="contact-link">
             <span class="contact-link-icon">🔗</span>
             <div class="contact-link-text">
-              <strong>Scholar Profiles</strong>
-              Google Scholar · ResearchGate · ORCID
+              <strong>Google Scholar</strong>
+              scholar.google.com/citations?user=pPv5YB8AAAAJ
             </div>
           </a>
           <a href="#" class="contact-link">
